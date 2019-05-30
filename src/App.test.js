@@ -62,6 +62,7 @@ test('clicking button increments counter', () => {
   // find button and click
   const button = findByTestAttr(wrapper, 'increment-button')
   button.simulate('click')
+  // update the simulated component after simulated event
   wrapper.update()
   // find display and test value
   const counterDisplay = findByTestAttr(wrapper, 'counter-display')
